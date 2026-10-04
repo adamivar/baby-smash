@@ -37,7 +37,7 @@ jobs:
           cat > test.sh <<'EOF'
           set -x
           PKG=io.github.adamivar.babysmash
-          adb install -r app.apk
+          adb install -r -g app.apk  # -g: grant the microphone up front, so the permission prompt stays out of the way
           adb logcat -c
           adb shell monkey -p $PKG -c android.intent.category.LAUNCHER 1
           sleep 45
