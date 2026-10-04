@@ -263,7 +263,9 @@ class Menu:
         self._button((w / 2 - bw / 2, h * 0.87, bw, bh), "Play", self._play, GOOD, "big")
         ew, eh = self._fit("Exit", "small")
         self._button((w * 0.03, h * 0.93, ew, eh), "Exit", self._exit, PANEL, "small")
-        self._text("In the game, type  quit  to come back here.", "small", DIM, midright=(w * 0.97, h * 0.95))
+        back = ("In the game, tap the 4 corners clockwise from top-left to come back here." if ANDROID
+                else "In the game, type  quit  to come back here.")
+        self._text(back, "small", DIM, midright=(w * 0.97, h * 0.95))
 
     def _draw_category_chips(self, y):
         """The "Play with" row: All, or any mix of categories (wraps to a second line if needed)."""

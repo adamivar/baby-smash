@@ -32,6 +32,29 @@ jobs:
             gh release download "${{ inputs.tag }}" -R "${{ github.repository }}" -p "*.apk" -O app.apk
           fi
 
+      - name: Write the test steps
+        run: |
+          cat > test.sh <<'EOF'
+          set -x
+          PKG=io.github.adamivar.babysmash
+          adb install -r app.apk
+          adb logcat -c
+          adb shell monkey -p $PKG -c android.intent.category.LAUNCHER 1
+          sleep 45
+          adb exec-out screencap -p > screen.png
+          # tap Play (bottom centre of the start screen), then poke the game a few times
+          read W H < <(adb shell wm size | tail -1 | sed 's/.*: //; s/x/ /' | tr -d '\r')
+          L=$(( W > H ? W : H )); S=$(( W > H ? H : W ))
+          adb shell input tap $(( L / 2 )) $(( S * 91 / 100 ))
+          sleep 15
+          for x in 30 50 70; do adb shell input tap $(( L * x / 100 )) $(( S / 2 )); sleep 4; done
+          adb exec-out screencap -p > playing.png
+          adb logcat -d > logcat.txt
+          adb shell run-as $PKG cat files/babysmash/crash_log.txt > crash_log.txt
+          adb shell run-as $PKG ls -R files > files.txt
+          true
+          EOF
+
       - name: Enable KVM (fast emulator)
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
@@ -45,22 +68,7 @@ jobs:
           target: google_apis
           arch: x86_64  # Android 11+ x86_64 images run arm apps through translation
           disable-animations: true
-          script: |
-            adb install -r app.apk
-            adb logcat -c
-            adb shell monkey -p io.github.adamivar.babysmash -c android.intent.category.LAUNCHER 1
-            sleep 45
-            adb exec-out screencap -p > screen.png || true
-            # tap Play (bottom centre of the start screen), then poke the game a few times
-            read W H < <(adb shell wm size | tail -1 | sed 's/.*: //; s/x/ /')
-            L=$(( W > H ? W : H )); S=$(( W > H ? H : W ))
-            adb shell input tap $(( L / 2 )) $(( S * 91 / 100 ))
-            sleep 15
-            for x in 30 50 70; do adb shell input tap $(( L * x / 100 )) $(( S / 2 )); sleep 4; done
-            adb exec-out screencap -p > playing.png || true
-            adb logcat -d > logcat.txt || true
-            adb shell run-as io.github.adamivar.babysmash cat files/babysmash/crash_log.txt > crash_log.txt || true
-            adb shell run-as io.github.adamivar.babysmash ls -R files > files.txt || true
+          script: bash test.sh  # (the runner runs each script line on its own, so the steps live in a file)
 
       - uses: actions/upload-artifact@v4
         if: always()
