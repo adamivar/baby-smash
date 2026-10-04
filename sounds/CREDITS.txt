@@ -1,0 +1,124 @@
+Baby Smash uses these recordings (trimmed and volume-levelled).
+
+SPOKEN WORDS (sounds/words/)
+Apple: LL-Q1860 (eng)-Grendelkhan-apple.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-apple.wav
+Ball: LL-Q1860 (eng)-Grendelkhan-ball.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-ball.wav
+Cat: LL-Q1860 (eng)-Grendelkhan-cat.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-cat.wav
+Dog: LL-Q1860 (eng)-Grendelkhan-dog.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-dog.wav
+Elephant: LL-Q1860 (eng)-Grendelkhan-elephant.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-elephant.wav
+Horse: LL-Q1860 (eng)-Grendelkhan-horse.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-horse.wav
+Juice: LL-Q1860 (eng)-Grendelkhan-juice.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-juice.wav
+Keys: LL-Q1860 (eng)-Grendelkhan-keys.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-keys.wav
+Lion: LL-Q1860 (eng)-Grendelkhan-lion.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-lion.wav
+Monkey: LL-Q1860 (eng)-Grendelkhan-monkey.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-monkey.wav
+Nose: LL-Q1860 (eng)-Grendelkhan-nose.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-nose.wav
+Pig: LL-Q1860 (eng)-Grendelkhan-pig.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-pig.wav
+Duck: LL-Q1860 (eng)-Grendelkhan-duck.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-duck.wav
+Bunny: LL-Q1860 (eng)-Grendelkhan-rabbit.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-rabbit.wav
+Sheep: LL-Q1860 (eng)-Grendelkhan-sheep.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-sheep.wav
+Train: LL-Q1860 (eng)-Grendelkhan-train.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-train.wav
+Bus: LL-Q1860 (eng)-Grendelkhan-bus.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bus.wav
+Car: LL-Q1860 (eng)-Grendelkhan-car.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-car.wav
+Fish: LL-Q1860 (eng)-Grendelkhan-fish.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-fish.wav
+Baby: LL-Q1860 (eng)-Grendelkhan-baby.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-baby.wav
+Bee: LL-Q1860 (eng)-Grendelkhan-bee.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bee.wav
+Cow: LL-Q1860 (eng)-Grendelkhan-cow.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-cow.wav
+Bird: LL-Q1860 (eng)-Grendelkhan-bird.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bird.wav
+Bear: LL-Q1860 (eng)-Grendelkhan-bear.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bear.wav
+Chick: LL-Q1860 (eng)-Grendelkhan-chick.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-chick.wav
+Shoe: LL-Q1860 (eng)-Grendelkhan-shoe.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-shoe.wav
+Milk: LL-Q1860 (eng)-Grendelkhan-milk.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-milk.wav
+Hat: LL-Q1860 (eng)-Grendelkhan-hat.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-hat.wav
+Moon: LL-Q1860 (eng)-Grendelkhan-moon.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-moon.wav
+Sun: LL-Q1860 (eng)-Grendelkhan-sun.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-sun.wav
+Book: LL-Q1860 (eng)-Grendelkhan-book.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-book.wav
+hello: LL-Q1860 (eng)-Grendelkhan-hello.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-hello.wav
+bye: LL-Q1860 (eng)-Grendelkhan-bye.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bye.wav
+where: LL-Q1860 (eng)-Grendelkhan-where.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-where.wav
+Frog: En-us-frog.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-frog.ogg
+Giraffe: En-us-giraffe.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-giraffe.ogg
+Ice cream: En-us-ice cream.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-ice_cream.ogg
+Owl: En-us-owl.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-owl.ogg
+Banana: En-us-banana.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-banana.ogg
+Eyes: LL-Q1860 (eng)-Grendelkhan-eyes.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-eyes.wav
+Ear: LL-Q1860 (eng)-Grendelkhan-ear.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-ear.wav
+Mouth: LL-Q1860 (eng)-Grendelkhan-mouth.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-mouth.wav
+Tongue: LL-Q1860 (eng)-Grendelkhan-tongue.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-tongue.wav
+Tooth: LL-Q1860 (eng)-Grendelkhan-tooth.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-tooth.wav
+Hand: LL-Q1860 (eng)-Grendelkhan-hand.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-hand.wav
+Foot: LL-Q1860 (eng)-Grendelkhan-foot.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-foot.wav
+Leg: LL-Q1860 (eng)-Grendelkhan-leg.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-leg.wav
+Arm: LL-Q1860 (eng)-Grendelkhan-arm.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-arm.wav
+Number 1: LL-Q1860 (eng)-Grendelkhan-one.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-one.wav
+Number 2: LL-Q1860 (eng)-Grendelkhan-two.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-two.wav
+Number 3: LL-Q1860 (eng)-Grendelkhan-three.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-three.wav
+Number 4: LL-Q1860 (eng)-Grendelkhan-four.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-four.wav
+Number 5: LL-Q1860 (eng)-Grendelkhan-five.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-five.wav
+Number 6: LL-Q1860 (eng)-Grendelkhan-six.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-six.wav
+Number 7: LL-Q1860 (eng)-Grendelkhan-seven.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-seven.wav
+Number 8: LL-Q1860 (eng)-Grendelkhan-eight.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-eight.wav
+Number 9: LL-Q1860 (eng)-Grendelkhan-nine.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-nine.wav
+Number 10: LL-Q1860 (eng)-Grendelkhan-ten.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-ten.wav
+Letter A: En-us-A.ogg by unknown speaker - Public domain - https://commons.wikimedia.org/wiki/File:En-us-A.ogg
+Letter B: En-us-b.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-b.ogg
+Letter C: En-us-c.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-c.ogg
+Letter D: En-us-d.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-d.ogg
+Letter E: En-us-e.ogg by Logictheo - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-e.ogg
+Letter F: En-us-f.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-f.ogg
+Letter G: En-us-g.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-g.ogg
+Letter H: En-us-h.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-h.ogg
+Letter I: En-us-I.ogg by unknown speaker - Public domain - https://commons.wikimedia.org/wiki/File:En-us-I.ogg
+Letter J: En-us-j.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-j.ogg
+Letter K: En-us-k.ogg by Neskaya - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-k.ogg
+Letter L: En-us-L.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-L.ogg
+Letter M: En-us-m.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-m.ogg
+Letter N: En-us-n.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-n.ogg
+Letter O: En-us-O.ogg by DroEsperanto - Public domain - https://commons.wikimedia.org/wiki/File:En-us-O.ogg
+Letter P: En-us-p.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-p.ogg
+Letter Q: En-us-q.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-q.ogg
+Letter R: En-us-r.ogg by Logictheo - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-r.ogg
+Letter S: En-us-s.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-s.ogg
+Letter T: En-us-t.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-t.ogg
+Letter U: En-us-u.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-u.ogg
+Letter V: En-us-v.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-v.ogg
+Letter W: En-us-w.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-w.ogg
+Letter X: En-us-X.ogg by Sylvanmoon - CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:En-us-X.ogg
+Letter Y: En-us-y.ogg by Twocs - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-y.ogg
+Letter Z: En-us-z.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-z.ogg
+peekaboo: LL-Q1860 (eng)-Vealhurl-peekaboo.wav by Vealhurl - CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-peekaboo.wav
+
+SOUND EFFECTS (sounds/)
+Cat: BigSoundBank #1898 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Dog: BigSoundBank #2955 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Frog: BigSoundBank #0997 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Horse: BigSoundBank #0863 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Owl: BigSoundBank #3459 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Sheep: BigSoundBank #2343 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Cow: BigSoundBank #2386 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Chick: BigSoundBank #1908 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Bird: BigSoundBank #3503 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Bee: BigSoundBank #1000 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Baby: BigSoundBank #0232 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Train: BigSoundBank #3011 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Car: BigSoundBank #0290 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Bus: BigSoundBank #1832 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Keys: BigSoundBank #2425 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Ball: BigSoundBank #2239 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Apple: BigSoundBank #1114 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Juice: BigSoundBank #1244 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Milk: BigSoundBank #1156 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Fish: BigSoundBank #0183 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Shoe: BigSoundBank #0166 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Book: BigSoundBank #2212 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Sun: BigSoundBank #1670 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Moon: BigSoundBank #0425 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Giraffe: BigSoundBank #0986 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Bunny: BigSoundBank #2284 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Hand: BigSoundBank #2363 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Mouth: BigSoundBank #2200 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Tooth: BigSoundBank #2190 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Nose: BigSoundBank #3308 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Arm: BigSoundBank #1796 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Lion: "Lionroar.wav" by Jonathan Growcott, Alex Lobora, Andrew Markham, Charlotte E. Searle, Johan Wahlström, Matthew Wijers, Benno I. Simmons - CC BY 4.0 - https://commons.wikimedia.org/wiki/File:Lionroar.wav
+Duck: "Domestic duck sound 01.wav" by Ganesh Mohan T - CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Domestic_duck_sound_01.wav
+Foot: same recording as Shoe

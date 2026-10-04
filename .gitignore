@@ -1,0 +1,10 @@
+# Your family's own stuff stays on your PC (recordings, drawings, settings)
+sounds/our_voice/
+sounds/our_sfx/
+objects/
+settings.json
+crash_log.txt
+
+# Python
+__pycache__/
+*.pyc
