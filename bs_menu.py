@@ -56,6 +56,22 @@ def save_settings(settings):
         json.dump(settings, f, indent=1)
 
 
+_FINGER_TO_MOUSE = {pygame.FINGERDOWN: pygame.MOUSEBUTTONDOWN, pygame.FINGERUP: pygame.MOUSEBUTTONUP,
+                    pygame.FINGERMOTION: pygame.MOUSEMOTION}
+
+
+def finger_as_mouse(e, w, h):
+    """On Android, touches come as finger events: turn them into the mouse events the menus use
+    (and drop any mouse copies SDL makes of them, so nothing is tapped twice). None = skip it."""
+    if e.type in _FINGER_TO_MOUSE.values():
+        return None if getattr(e, "touch", False) else e
+    if e.type in _FINGER_TO_MOUSE:
+        pos = (int(e.x * w), int(e.y * h))
+        held = (1, 0, 0) if e.type == pygame.FINGERMOTION else (0, 0, 0)
+        return pygame.event.Event(_FINGER_TO_MOUSE[e.type], pos=pos, button=1, buttons=held, touch=False)
+    return e
+
+
 def voice_names():
     """Everything a voice can say: every object's name, then the extra phrases."""
     return [it.id for it in objs.load_items(enabled_only=False)] + list(objs.EXTRA_WORDS)
@@ -115,6 +131,10 @@ class Menu:
 
     def _frame(self):
         for e in pygame.event.get():
+            if ANDROID:
+                e = finger_as_mouse(e, self.w, self.h)
+                if e is None:
+                    continue
             if self.page == "edit" and e.type in (pygame.MOUSEBUTTONDOWN, pygame.MOUSEMOTION, pygame.MOUSEBUTTONUP):
                 drawing = self.objects.stroke_last is not None
                 self.objects.mouse(e)
