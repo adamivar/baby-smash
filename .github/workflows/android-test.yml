@@ -1,0 +1,55 @@
+# Runs a released .apk on an Android emulator and saves what happened: the system log (logcat),
+# the game's crash_log.txt and a screenshot. Actions tab > "Android test" > Run workflow.
+name: Android test
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag whose .apk to test (e.g. v1.0.1)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the .apk
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download "${{ inputs.tag }}" -R "${{ github.repository }}" -p "*.apk" -O app.apk
+
+      - name: Enable KVM (fast emulator)
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Run it on an emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 31
+          target: google_apis
+          arch: x86_64  # Android 11+ x86_64 images run arm apps through translation
+          disable-animations: true
+          script: |
+            adb install -r app.apk
+            adb logcat -c
+            adb shell monkey -p io.github.adamivar.babysmash -c android.intent.category.LAUNCHER 1
+            sleep 60
+            adb logcat -d > logcat.txt || true
+            adb exec-out screencap -p > screen.png || true
+            adb shell run-as io.github.adamivar.babysmash cat files/babysmash/crash_log.txt > crash_log.txt || true
+            adb shell run-as io.github.adamivar.babysmash ls -R files > files.txt || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: android-test
+          path: |
+            logcat.txt
+            screen.png
+            crash_log.txt
+            files.txt
