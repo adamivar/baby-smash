@@ -11,6 +11,7 @@ from bs_audio import MAX_RECORD_SECONDS, MicRecorder, clean_recording, save_wav
 from bs_editor import ObjectPages
 from bs_log import log_error
 from bs_paths import ANDROID, DATA_DIR
+from bs_system import sys_font
 
 SETTINGS_PATH = os.path.join(DATA_DIR, "settings.json")
 # categories: [] = play with every category, else the chosen category names
@@ -75,7 +76,6 @@ class Menu:
         self.settings = settings
         self.w, self.h = screen.get_size()
         u = min(self.w, self.h)
-        sys_font = pygame.font.SysFont
         self.fonts = {"title": sys_font("segoeui", int(u * 0.07), bold=True),
                       "big": sys_font("segoeui", int(u * 0.05), bold=True),
                       "normal": sys_font("segoeui", int(u * 0.031)),

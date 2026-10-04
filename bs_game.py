@@ -13,6 +13,7 @@ import pygame
 from bs_audio import PENTATONIC, counting_chimes, make_tone
 from bs_objects import PARTS, object_art
 from bs_paths import ANDROID
+from bs_system import sys_font
 
 NEW_ITEM_COOLDOWN = 1.6  # seconds before a new thing can replace the current one
 MORE_MINUTES = 5         # added by typing "more"
@@ -324,9 +325,9 @@ class Game:
         self.talk_until = 0.0  # when the spoken part ends (real sounds may be cut off after this)
         self.chimes = [make_tone(523.25 * 2 ** (s / 12), dur=0.4, vol=0.12) for s in PENTATONIC]
 
-        label_font = pygame.font.SysFont("arialroundedmtbold,comicsansms,arialblack,arial",
-                                         int(self.unit * 0.09), bold=True)
-        self.small_font = pygame.font.SysFont("segoeui,arial", max(16, int(self.h * 0.024)))
+        label_font = sys_font("arialroundedmtbold,comicsansms,arialblack,arial",
+                               int(self.unit * 0.09), bold=True)
+        self.small_font = sys_font("segoeui,arial", max(16, int(self.h * 0.024)))
         self.pictures, self.silhouettes = {}, {}
         shown_parts = [self.parts["hello"]] if "hello" not in self.off else []
         for it in items + shown_parts:  # your drawing if there is one, else the emoji

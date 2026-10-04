@@ -1,9 +1,13 @@
 """The system around the game: the fullscreen display everywhere, plus the toddler-proofing
 that only Windows allows (bs_windows). On Android those parts do nothing - use Android's
 app pinning instead (see README)."""
+import os
+
 import pygame
 
 from bs_paths import ANDROID, WINDOWS
+
+ANDROID_FONTS = ("/system/fonts/Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf")
 
 if WINDOWS:
     from bs_windows import (AccessibilityShortcuts, KeyBlocker, bring_back,  # noqa: F401
@@ -39,6 +43,15 @@ else:
 
     def disable_touch_feedback(_hwnd):
         pass
+
+
+def sys_font(names, size, bold=False):
+    """pygame.font.SysFont - except on Android, where pygame can't list the fonts: Roboto there."""
+    if not ANDROID:
+        return pygame.font.SysFont(names, size, bold=bold)
+    font = pygame.font.Font(next((p for p in ANDROID_FONTS if os.path.exists(p)), None), size)
+    font.set_bold(bold)
+    return font
 
 
 def ask_for_microphone():

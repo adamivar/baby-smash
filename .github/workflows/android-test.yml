@@ -49,9 +49,16 @@ jobs:
             adb install -r app.apk
             adb logcat -c
             adb shell monkey -p io.github.adamivar.babysmash -c android.intent.category.LAUNCHER 1
-            sleep 60
-            adb logcat -d > logcat.txt || true
+            sleep 45
             adb exec-out screencap -p > screen.png || true
+            # tap Play (bottom centre of the start screen), then poke the game a few times
+            read W H < <(adb shell wm size | tail -1 | sed 's/.*: //; s/x/ /')
+            L=$(( W > H ? W : H )); S=$(( W > H ? H : W ))
+            adb shell input tap $(( L / 2 )) $(( S * 91 / 100 ))
+            sleep 15
+            for x in 30 50 70; do adb shell input tap $(( L * x / 100 )) $(( S / 2 )); sleep 4; done
+            adb exec-out screencap -p > playing.png || true
+            adb logcat -d > logcat.txt || true
             adb shell run-as io.github.adamivar.babysmash cat files/babysmash/crash_log.txt > crash_log.txt || true
             adb shell run-as io.github.adamivar.babysmash ls -R files > files.txt || true
 
@@ -62,5 +69,6 @@ jobs:
           path: |
             logcat.txt
             screen.png
+            playing.png
             crash_log.txt
             files.txt

@@ -21,6 +21,7 @@ import pygame
 
 from bs_audio import OUR_SFX_DIR, OUR_VOICE_DIR, SOUNDS_DIR, WORDS_DIR
 from bs_paths import APP_DIR, DATA_DIR
+from bs_system import sys_font
 
 OBJECTS_DIR = os.path.join(DATA_DIR, "objects")
 DATA_PATH = os.path.join(OBJECTS_DIR, "objects.json")
@@ -422,7 +423,7 @@ def render_glyph(item, height):
     text_h = int(height * (0.68 if digits else 1.0))
     size = max(8, int(text_h * 1.15))
     if size not in _glyph_fonts:
-        _glyph_fonts[size] = pygame.font.SysFont("arialroundedmtbold,comicsansms,arialblack,arial", size, bold=True)
+        _glyph_fonts[size] = sys_font("arialroundedmtbold,comicsansms,arialblack,arial", size, bold=True)
     font = _glyph_fonts[size]
     n = ord(item.glyph[-1]) + len(item.glyph)
     color = GLYPH_COLORS[n % len(GLYPH_COLORS)]
