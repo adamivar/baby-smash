@@ -70,6 +70,11 @@ included in `sounds/`).
 | `bs_system.py` | Windows key blocking, accessibility pop-ups, display |
 | `bs_log.py` | error log |
 
+## License
+
+The code is released under the [MIT License](LICENSE). The recordings in `sounds/` are not
+covered by it - each keeps its own license, listed in [`sounds/CREDITS.txt`](sounds/CREDITS.txt).
+
 ## Credits
 
 Pictures are Microsoft's Segoe UI Emoji font (built into Windows). Real-world sound effects
