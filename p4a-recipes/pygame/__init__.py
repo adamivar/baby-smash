@@ -62,6 +62,11 @@ class Pygame2Recipe(CompiledComponentsPythonRecipe):
                 png_includes="-I"+png_inc_dir,
                 freetype_includes=""
             )
+            # pygame 2.6's Android template leaves out the SIMD blitters, but on arm64 surface.so
+            # calls them (NEON is on by default there): without them pygame.display won't load.
+            simd = "src_c/simd_blitters_sse2.c src_c/simd_blitters_avx2.c "
+            assert "surface src_c/surface.c" in setup_file
+            setup_file = setup_file.replace("surface src_c/surface.c", "surface " + simd + "src_c/surface.c")
             open("Setup", "w").write(setup_file)
 
     def get_recipe_env(self, arch):

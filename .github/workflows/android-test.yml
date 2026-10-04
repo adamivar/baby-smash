@@ -1,5 +1,6 @@
-# Runs a released .apk on an Android emulator and saves what happened: the system log (logcat),
-# the game's crash_log.txt and a screenshot. Actions tab > "Android test" > Run workflow.
+# Runs an .apk on an Android emulator and saves what happened: the system log (logcat), the
+# game's crash_log.txt and a screenshot. Actions tab > "Android test" > Run workflow, with either a
+# release tag or the id of a "Release" workflow run (a test build).
 name: Android test
 
 on:
@@ -7,10 +8,14 @@ on:
     inputs:
       tag:
         description: "Release tag whose .apk to test (e.g. v1.0.1)"
-        required: true
+        required: false
+      run:
+        description: "...or the id of a Release workflow run whose .apk to test"
+        required: false
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   test:
@@ -19,7 +24,13 @@ jobs:
       - name: Download the .apk
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release download "${{ inputs.tag }}" -R "${{ github.repository }}" -p "*.apk" -O app.apk
+        run: |
+          if [ -n "${{ inputs.run }}" ]; then
+            gh run download "${{ inputs.run }}" -R "${{ github.repository }}" -n BabySmash-apk -D apk
+            mv apk/*.apk app.apk
+          else
+            gh release download "${{ inputs.tag }}" -R "${{ github.repository }}" -p "*.apk" -O app.apk
+          fi
 
       - name: Enable KVM (fast emulator)
         run: |
