@@ -4,7 +4,7 @@ package.name = babysmash
 package.domain = io.github.adamivar
 source.dir = .
 source.include_exts = py,pyw,wav,png,txt
-source.exclude_dirs = tools, .github, bin, .buildozer, __pycache__, objects, sounds/our_voice, sounds/our_sfx, build, dist
+source.exclude_dirs = tools, p4a-recipes, .github, bin, .buildozer, __pycache__, objects, sounds/our_voice, sounds/our_sfx, build, dist
 source.exclude_patterns = settings.json, crash_log.txt, bs_windows.py, image_compare.png
 version = 1.0.0
 requirements = python3,pygame,android
@@ -20,6 +20,7 @@ android.accept_sdk_license = True
 android.allow_backup = True
 android.ndk = 25b
 p4a.branch = v2024.01.21
+p4a.local_recipes = ./p4a-recipes
 
 [buildozer]
 log_level = 2
