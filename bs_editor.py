@@ -16,6 +16,7 @@ import bs_objects as objs
 from bs_audio import MAX_RECORD_SECONDS, MicRecorder, clean_recording, counting_chimes, save_wav
 from bs_game import motion_offsets
 from bs_log import log_error
+from bs_paths import ANDROID
 
 CANVAS = 512  # drawings are stored as 512x512 PNGs with a transparent background
 PALETTE = [(30, 30, 35), (255, 255, 255), (229, 57, 53), (251, 140, 0), (253, 216, 53), (67, 160, 71),
@@ -125,8 +126,9 @@ class ObjectPages:
             elif e.key == pygame.K_ESCAPE:
                 self.typing = None
                 return
-            elif e.unicode and e.unicode.isprintable() and len(t["value"]) < MAX_NAME:
-                t["value"] = e.unicode if t["fresh"] else t["value"] + e.unicode
+            elif e.unicode and not ANDROID:  # (Android's keyboard sends TEXTINPUT instead: type_text)
+                self.type_text(e.unicode)
+                return
             else:
                 return
             t["fresh"] = False
@@ -136,6 +138,16 @@ class ObjectPages:
             self._undo()
         elif e.key == pygame.K_ESCAPE:
             {"edit": self.close_edit, "pick": self._close_picker}.get(self.m.page, self._back)()
+
+    def type_text(self, text):
+        t = self.typing
+        text = "".join(c for c in text if c.isprintable())
+        if not t or not text:
+            return
+        t["value"] = (text if t["fresh"] else t["value"] + text)[:MAX_NAME]
+        t["fresh"] = False
+        if t["target"] == "name":
+            self.item = self.item._replace(word=t["value"])
 
     def _finish_typing(self):
         """Save what was typed."""

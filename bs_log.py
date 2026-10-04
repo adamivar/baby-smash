@@ -1,11 +1,13 @@
-"""Error log: pythonw has no console, so problems are written to crash_log.txt next to the game."""
+"""Error log: pythonw has no console, so problems are written to crash_log.txt (next to your settings)."""
 import datetime
 import faulthandler
 import os
 import sys
 import traceback
 
-LOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "crash_log.txt")
+from bs_paths import DATA_DIR
+
+LOG_PATH = os.path.join(DATA_DIR, "crash_log.txt")
 _fault_file = None
 
 

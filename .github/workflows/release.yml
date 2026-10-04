@@ -1,0 +1,105 @@
+# Builds the Windows .exe and the Android .apk. Push a tag like v1.0.0 to publish both as a GitHub
+# Release; "Run workflow" on the Actions tab builds them without releasing (download from the run's artifacts).
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Build the .exe
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt pyinstaller pillow
+          python -m PyInstaller --noconfirm --onefile --windowed --name BabySmash \
+            --icon images/emoji/emoji_u1f9f8.png --add-data "sounds;sounds" --add-data "images;images" baby_smash.pyw
+          mkdir -p out
+          cp dist/BabySmash.exe "out/BabySmash-${GITHUB_REF_NAME//\//-}.exe"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BabySmash-exe
+          path: out/*.exe
+
+  android:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git zip unzip autoconf automake libtool pkg-config zlib1g-dev libncurses5-dev \
+            libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+          python -m pip install --upgrade pip
+          python -m pip install buildozer "cython==0.29.37"
+
+      - name: Check the code compiles on the phone's Python (3.11)
+        run: python -m compileall -q main.py baby_smash.pyw bs_*.py
+
+      - name: Cache the Android SDK / NDK
+        uses: actions/cache@v4
+        with:
+          path: ~/.buildozer
+          key: buildozer-${{ runner.os }}-${{ hashFiles('buildozer.spec') }}
+
+      - name: Build the .apk
+        run: yes | buildozer -v android debug
+
+      - name: Name the APK
+        run: |
+          mkdir -p out
+          cp bin/*.apk "out/BabySmash-${GITHUB_REF_NAME//\//-}.apk"
+          ls -l out
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BabySmash-apk
+          path: out/*.apk
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [windows, android]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: out
+          merge-multiple: true
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: out/*
+          body: |
+            **Windows:** download the .exe and run it. Windows SmartScreen may warn because the file isn't
+            signed: click "More info", then "Run anyway". Your recordings, drawings and settings are kept in
+            %LOCALAPPDATA%\Baby Smash.
+
+            **Android:** download the .apk on the phone or tablet, open it, and allow "Install unknown apps"
+            for your browser when Android asks. The game runs in landscape. To get back to the start screen
+            while playing, tap the four corners clockwise starting top-left. Android can't block the home
+            button, so turn on App pinning (Settings > Security > App pinning) and pin the game before
+            handing it over.

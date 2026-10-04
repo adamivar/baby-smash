@@ -10,9 +10,9 @@ import bs_objects as objs
 from bs_audio import MAX_RECORD_SECONDS, MicRecorder, clean_recording, save_wav
 from bs_editor import ObjectPages
 from bs_log import log_error
+from bs_paths import ANDROID, DATA_DIR
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-SETTINGS_PATH = os.path.join(HERE, "settings.json")
+SETTINGS_PATH = os.path.join(DATA_DIR, "settings.json")
 # categories: [] = play with every category, else the chosen category names
 DEFAULTS = {"theme": "night", "mode": "words", "voice": "ours", "minutes": 10, "tips": True, "categories": []}
 CHOICES = {  # setting: [(button text, value)]
@@ -80,13 +80,14 @@ class Menu:
                       "big": sys_font("segoeui", int(u * 0.05), bold=True),
                       "normal": sys_font("segoeui", int(u * 0.031)),
                       "small": sys_font("segoeui", int(u * 0.024))}
-        self.emoji_font = pygame.font.Font(objs.EMOJI_FONT, int(u * 0.2))
+        self.emoji_size = int(u * 0.2)
         self.page = "menu"
         self.buttons = []
         self.result = None
         self.recorder = MicRecorder()
         self.channel = pygame.mixer.Channel(0)
         self.objects = ObjectPages(self)
+        self.keyboard_up = False  # Android's on-screen keyboard
         # "record our voices" page
         self.names = voice_names()
         self.index = 0
@@ -122,7 +123,14 @@ class Menu:
             if e.type == pygame.MOUSEBUTTONUP and e.button == 1:  # also what a touchscreen tap sends
                 self._click(e.pos)
             elif e.type == pygame.KEYDOWN:
+                if e.key == pygame.K_AC_BACK:  # Android's back button
+                    e = pygame.event.Event(pygame.KEYDOWN, key=pygame.K_ESCAPE, unicode="", mod=0)
                 self._key(e)
+            elif e.type == pygame.TEXTINPUT:  # Android's on-screen keyboard types this way
+                self.objects.type_text(e.text)
+        if ANDROID and bool(self.objects.typing) != self.keyboard_up:  # on-screen keyboard up while typing
+            self.keyboard_up = bool(self.objects.typing)
+            (pygame.key.start_text_input if self.keyboard_up else pygame.key.stop_text_input)()
         if self.recording and self.recorder.seconds() >= MAX_RECORD_SECONDS:
             self._stop_recording()
         self.objects.tick()
@@ -351,7 +359,7 @@ class Menu:
         """(picture, word to show, what to say)"""
         if name in EXTRA_PROMPTS:
             emoji, say = EXTRA_PROMPTS[name]
-            return self.emoji_font.render(emoji, True, (0, 0, 0)), name.capitalize(), say
+            return objs.render_emoji(emoji, self.emoji_size), name.capitalize(), say
         item = objs.get_item(name)
         return self.objects.thumb(item, int(self.h * 0.24)), item.word, f'"{item.word}!"'
 

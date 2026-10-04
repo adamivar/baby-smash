@@ -12,6 +12,7 @@ import pygame
 
 from bs_audio import PENTATONIC, counting_chimes, make_tone
 from bs_objects import PARTS, object_art
+from bs_paths import ANDROID
 
 NEW_ITEM_COOLDOWN = 1.6  # seconds before a new thing can replace the current one
 MORE_MINUTES = 5         # added by typing "more"
@@ -736,10 +737,15 @@ class Game:
             text = self.small_font.render(tip, True, color)
             self.screen.blit(text, text.get_rect(bottomleft=(pad * 2, self.h - pad)))
         mode = "peekaboo" if self.peekaboo else "who's that"
-        info = f"grown-ups type:  quit (menu) · peek (now: {mode})"
+        if ANDROID:  # no keyboard: the corner taps (see baby_smash.pyw) are the way out
+            info = "grown-ups: tap the 4 corners clockwise from top-left for the menu"
+        else:
+            info = f"grown-ups type:  quit (menu) · peek (now: {mode})"
         if self.session_left is not None:
-            info += (" · more (+5 min)" if self.sleeping
-                     else f" · {max(0, math.ceil(self.session_left / 60))} min left")
+            if not self.sleeping:
+                info += f" · {max(0, math.ceil(self.session_left / 60))} min left"
+            elif not ANDROID:
+                info += " · more (+5 min)"
         text = self.small_font.render(info, True, color)
         text.set_alpha(150)
         self.screen.blit(text, text.get_rect(bottomright=(self.w - pad * 2, self.h - pad)))

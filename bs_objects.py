@@ -20,12 +20,13 @@ from collections import namedtuple
 import pygame
 
 from bs_audio import OUR_SFX_DIR, OUR_VOICE_DIR, SOUNDS_DIR, WORDS_DIR
+from bs_paths import APP_DIR, DATA_DIR
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-OBJECTS_DIR = os.path.join(HERE, "objects")
+OBJECTS_DIR = os.path.join(DATA_DIR, "objects")
 DATA_PATH = os.path.join(OBJECTS_DIR, "objects.json")
 DRAWINGS_DIR = os.path.join(OBJECTS_DIR, "drawings")
-EMOJI_FONT = r"C:\Windows\Fonts\seguiemj.ttf"
+EMOJI_FONT = r"C:\Windows\Fonts\seguiemj.ttf"  # Windows' own emoji
+EMOJI_DIR = os.path.join(APP_DIR, "images", "emoji")  # Noto emoji pictures, for where that font isn't (Android)
 
 # key: the keyboard key that always brings it (None for new objects);
 # says: for the grown-up tip ("The dog says woof woof!"); move: its animation (see MOVES);
@@ -463,7 +464,25 @@ def object_art(item, height):
         return render_glyph(item, height)
     if item.id == "where":  # the bush is drawn, not an emoji
         return bush_art(int(height * 1.9), height)
-    size = max(8, int(height / 1.1))
-    if size not in _emoji_fonts:
-        _emoji_fonts[size] = pygame.font.Font(EMOJI_FONT, size)
-    return _emoji_fonts[size].render(item.emoji or "❓", True, (0, 0, 0))
+    return render_emoji(item.emoji or "❓", height)
+
+
+def emoji_file(emoji):
+    """The Noto picture of an emoji: images/emoji/emoji_u1f436.png (tools/get_emoji.py fetches them)."""
+    codes = [f"{ord(c):x}" for c in emoji if ord(c) != 0xFE0F]  # Noto names leave out the emoji-style marker
+    return os.path.join(EMOJI_DIR, "emoji_u" + "_".join(codes) + ".png")
+
+
+def render_emoji(emoji, height):
+    """An emoji about `height` px tall: Windows' emoji font if there is one, else the Noto picture."""
+    if os.path.exists(EMOJI_FONT):
+        size = max(8, int(height / 1.1))
+        if size not in _emoji_fonts:
+            _emoji_fonts[size] = pygame.font.Font(EMOJI_FONT, size)
+        return _emoji_fonts[size].render(emoji, True, (0, 0, 0))
+    path = emoji_file(emoji)
+    if not os.path.exists(path):
+        path = emoji_file("❓")
+    pic = pygame.image.load(path).convert_alpha()
+    k = height * 0.92 / pic.get_height()  # the font's emoji fill about this much of their height
+    return pygame.transform.smoothscale(pic, (max(1, int(pic.get_width() * k)), max(1, int(pic.get_height() * k))))

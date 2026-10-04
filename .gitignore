@@ -8,3 +8,11 @@ crash_log.txt
 # Python
 __pycache__/
 *.pyc
+
+# Builds
+build/
+dist/
+bin/
+.buildozer/
+*.spec.bak
+BabySmash.spec

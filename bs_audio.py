@@ -6,11 +6,12 @@ import wave
 
 import pygame
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-SOUNDS_DIR = os.path.join(HERE, "sounds")           # what things sound like: <Word>.wav
+from bs_paths import APP_DIR, DATA_DIR
+
+SOUNDS_DIR = os.path.join(APP_DIR, "sounds")        # what things sound like: <Word>.wav
 WORDS_DIR = os.path.join(SOUNDS_DIR, "words")       # downloaded voices saying words: <Word>.wav
-OUR_VOICE_DIR = os.path.join(SOUNDS_DIR, "our_voice")  # your own recordings of the names: <id>.wav
-OUR_SFX_DIR = os.path.join(SOUNDS_DIR, "our_sfx")      # your own recordings of what things sound like: <id>.wav
+OUR_VOICE_DIR = os.path.join(DATA_DIR, "sounds", "our_voice")  # your own recordings of the names: <id>.wav
+OUR_SFX_DIR = os.path.join(DATA_DIR, "sounds", "our_sfx")      # your own recordings of what things sound like
 RATE = 44100
 MAX_RECORD_SECONDS = 4.0
 
