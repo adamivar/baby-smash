@@ -40,6 +40,25 @@ Giraffe: En-us-giraffe.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikime
 Ice cream: En-us-ice cream.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-ice_cream.ogg
 Owl: En-us-owl.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-owl.ogg
 Banana: En-us-banana.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-banana.ogg
+Mommy: LL-Q1860 (eng)-Grendelkhan-mommy.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-mommy.wav
+Daddy: LL-Q1860 (eng)-Grendelkhan-daddy.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-daddy.wav
+Cup: LL-Q1860 (eng)-Grendelkhan-cup.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-cup.wav
+Bottle: LL-Q1860 (eng)-Grendelkhan-bottle.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bottle.wav
+Bath: LL-Q1860 (eng)-Grendelkhan-bath.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bath.wav
+Bed: LL-Q1860 (eng)-Grendelkhan-bed.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bed.wav
+Teddy: LL-Q1860 (eng)-Grendelkhan-teddy.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-teddy.wav
+Socks: LL-Q1860 (eng)-Grendelkhan-socks.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-socks.wav
+Phone: LL-Q1860 (eng)-Grendelkhan-phone.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-phone.wav
+Cheese: LL-Q1860 (eng)-Grendelkhan-cheese.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-cheese.wav
+Bread: LL-Q1860 (eng)-Grendelkhan-bread.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-bread.wav
+Water: LL-Q1860 (eng)-Grendelkhan-water.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-water.wav
+Truck: LL-Q1860 (eng)-Grendelkhan-truck.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-truck.wav
+Plane: LL-Q1860 (eng)-Grendelkhan-plane.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-plane.wav
+Boat: LL-Q1860 (eng)-Grendelkhan-boat.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-boat.wav
+Tree: LL-Q1860 (eng)-Grendelkhan-tree.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-tree.wav
+Flower: LL-Q1860 (eng)-Grendelkhan-flower.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-flower.wav
+Spoon: En-us-spoon.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-spoon.ogg
+Toothbrush: En-us-toothbrush.ogg by Dvortygirl - CC BY-SA 3.0 - https://commons.wikimedia.org/wiki/File:En-us-toothbrush.ogg
 Eyes: LL-Q1860 (eng)-Grendelkhan-eyes.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-eyes.wav
 Ear: LL-Q1860 (eng)-Grendelkhan-ear.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-ear.wav
 Mouth: LL-Q1860 (eng)-Grendelkhan-mouth.wav by Grendelkhan - CC0 - https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-mouth.wav
@@ -119,6 +138,20 @@ Mouth: BigSoundBank #2200 by Joseph Sardin - CC0 (public domain) - https://bigso
 Tooth: BigSoundBank #2190 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
 Nose: BigSoundBank #3308 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
 Arm: BigSoundBank #1796 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Mommy: BigSoundBank #2202 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Daddy: BigSoundBank #2199 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Spoon: BigSoundBank #0686 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Bath: BigSoundBank #0192 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Bed: BigSoundBank #0929 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Phone: BigSoundBank #0253 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Toothbrush: BigSoundBank #0718 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Water: BigSoundBank #1156 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Truck: BigSoundBank #2721 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Plane: BigSoundBank #3008 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Boat: BigSoundBank #3507 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
+Tree: BigSoundBank #0659 by Joseph Sardin - CC0 (public domain) - https://bigsoundbank.com
 Lion: "Lionroar.wav" by Jonathan Growcott, Alex Lobora, Andrew Markham, Charlotte E. Searle, Johan Wahlström, Matthew Wijers, Benno I. Simmons - CC BY 4.0 - https://commons.wikimedia.org/wiki/File:Lionroar.wav
 Duck: "Domestic duck sound 01.wav" by Ganesh Mohan T - CC BY-SA 4.0 - https://commons.wikimedia.org/wiki/File:Domestic_duck_sound_01.wav
 Foot: same recording as Shoe
+Cup: same recording as Juice
+Bottle: same recording as Milk

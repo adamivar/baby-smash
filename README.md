@@ -10,8 +10,8 @@ friendly happens - and the little one can't accidentally escape to the desktop.
   barking, a cow mooing), then it's revealed as a real human voice says its name, and the sound
   plays again. Revealed things move in character: frogs hop, fish swim, cars drive.
 - **Peekaboo** An animal hides behind a bush; any tap or key reveals it.
-- **81 built-in things** in categories (animals, food, vehicles, body parts, letters A-Z,
-  numbers 1-10 with counting dots and chimes, and more). Each letter/number key always brings the
+- **100 built-in things** in categories (people, animals, food, vehicles, body parts, everyday
+  things like cup, bath and teddy, letters A-Z, numbers 1-10 with counting dots and chimes, and more). Each letter/number key always brings the
   same thing; pressing it again alternates with the letter itself (A: Apple, then "A").
 - **Night (default) or day look**, a gentle 10-minute play time that ends on a calm
   "All done!" moon, and small "Say: ..." tips for the grown-up playing along.

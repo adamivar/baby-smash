@@ -79,17 +79,40 @@ _BUILTIN = [
     (None, "Foot", "🦶", None, "Show: Stomp your feet! Stomp stomp!", "stomp"),
     (None, "Leg", "🦵", None, "Show: Kick your legs! Kick kick!", "swing"),
     (None, "Arm", "💪", None, "Show: Arms up high! So big!", "rock"),
+    # everyday first words (people, routines, food, vehicles, outside): also from taps and other keys
+    (None, "Mommy", "👩", "mwah", "Show: Point to Mommy! Where's Mommy?", "wag"),
+    (None, "Daddy", "👨", "mwah", "Show: Point to Daddy! Where's Daddy?", "wag"),
+    (None, "Cup", "🥤", "sip sip", "Do: Hold up his cup. Sip sip!", "jiggle"),
+    (None, "Bottle", "🍼", "glug glug", None, "rock"),
+    (None, "Spoon", "🥄", "yum yum", "Show: Pretend to eat with a spoon. Yum yum!", "jiggle"),
+    (None, "Bath", "🛁", "splash splash", "Show: Splash your hands! Bath time!", "float"),
+    (None, "Bed", "🛏", "shh", "Show: Lay your head on your hands. Night night!", "rock"),
+    (None, "Teddy", "🧸", None, "Show: Give teddy a big hug!", "rock"),
+    (None, "Socks", "🧦", None, "Ask: Where are your socks? On your feet!", "jiggle"),
+    (None, "Phone", "📱", "ring ring", "Show: Hold your hand to your ear. Hello!", "jiggle"),
+    (None, "Toothbrush", "🪥", "brush brush", "Show: Brush brush your teeth!", "wag"),
+    (None, "Cheese", "🧀", "yum", None, "jiggle"),
+    (None, "Bread", "🍞", "yum", None, "jiggle"),
+    (None, "Water", "💧", "drip drop", None, "float"),
+    (None, "Truck", "🚚", "honk honk", None, "drive"),
+    (None, "Plane", "✈", "zoom", "Show: Arms out wide, fly like a plane!", "fly"),
+    (None, "Boat", "⛵", "toot toot", None, "swim"),
+    (None, "Tree", "🌳", "whoosh", "Show: Arms up high, sway like a tree!", "sway"),
+    (None, "Flower", "🌸", "sniff sniff", "Show: Smell the flower! Sniff sniff.", "sway"),
 ]
 OUR_OWN = "Our own"  # where new objects go
-DEFAULT_CATEGORIES = ["Animals", "Food & drink", "Vehicles", "Body parts", "Letters", "Numbers", "My things", "Sky",
-                      OUR_OWN]
+DEFAULT_CATEGORIES = ["People", "Animals", "Food & drink", "Vehicles", "Body parts", "Letters", "Numbers", "My things",
+                      "Outside", "Sky", OUR_OWN]
 _DEFAULT_CATEGORY = {word: cat for cat, words in {
+    "People": ["Mommy", "Daddy", "Baby"],
     "Animals": ["Cat", "Dog", "Elephant", "Frog", "Giraffe", "Horse", "Lion", "Monkey", "Owl", "Pig", "Duck",
                 "Bunny", "Sheep", "Fish", "Bee", "Cow", "Bird", "Bear", "Chick"],
-    "Food & drink": ["Apple", "Ice cream", "Juice", "Banana", "Milk"],
-    "Vehicles": ["Train", "Bus", "Car"],
+    "Food & drink": ["Apple", "Ice cream", "Juice", "Banana", "Milk", "Cup", "Bottle", "Spoon", "Cheese", "Bread",
+                     "Water"],
+    "Vehicles": ["Train", "Bus", "Car", "Truck", "Plane", "Boat"],
     "Body parts": ["Nose", "Eyes", "Ear", "Mouth", "Tongue", "Tooth", "Hand", "Foot", "Leg", "Arm"],
-    "My things": ["Ball", "Keys", "Baby", "Shoe", "Hat", "Book"],
+    "My things": ["Ball", "Keys", "Shoe", "Hat", "Book", "Bath", "Bed", "Teddy", "Socks", "Phone", "Toothbrush"],
+    "Outside": ["Tree", "Flower"],
     "Sky": ["Moon", "Sun"],
 }.items() for word in words}
 BUILTIN = [Item(*fields, fields[1], False, _DEFAULT_CATEGORY[fields[1]]) for fields in _BUILTIN]
